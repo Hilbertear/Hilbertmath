@@ -32,8 +32,8 @@ theme:
 nav:
   - 主页: index.md
   - 笔记与讲稿:
-      - PDE: getting_started.md
-      - 几何: configuration.md
+      - PDE: pde.md
+      - 几何: geometry.md
   - 学习资源:
       - 数学: mathresources.md
       - 物理: phyresources.md

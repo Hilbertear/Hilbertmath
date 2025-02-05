@@ -3,4 +3,4 @@
 ## 黎曼几何
 
 这是我的黎曼几何期中小论文:
-[Bochner 技巧及其应用](main/docs/Geometry/midterm.pdf)
+[Bochner 技巧及其应用](../docs/Geometry/midterm.pdf)

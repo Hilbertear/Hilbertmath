@@ -31,10 +31,13 @@ theme:
 
 nav:
   - 主页: index.md
-  - 讲稿:
-      - Getting Started: getting_started.md
-      - Configuration: configuration.md
-  - 联系: contacts.md
+  - 笔记与讲稿:
+      - PDE: getting_started.md
+      - 几何: configuration.md
+  - 学习资源:
+      - 数学: mathresources.md
+      - 物理: phyresources.md
+  - 随笔: write.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

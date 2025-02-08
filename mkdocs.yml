@@ -34,6 +34,7 @@ nav:
   - 笔记与讲稿:
       - PDE: pde.md
       - 几何: geometry.md
+      - 一些数学感悟: thoughts.md
   - 学习资源:
       - 数学: mathresources.md
       - 物理: phyresources.md

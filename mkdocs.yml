@@ -39,7 +39,10 @@ nav:
   - 学习资源:
       - 数学: mathresources.md
       - 物理: phyresources.md
-  - 随笔: write.md
+  - 写作:
+      - 简介: write.md
+      - 收录: write2.md
+      - 随笔: write3.md
 
 markdown_extensions:
   - meta

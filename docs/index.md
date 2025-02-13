@@ -1,12 +1,9 @@
 ---
-
 title: "自我介绍"
 date: "2025-02-13"
 tags:
-
-- 简介
-  disqus: "Hilbertear"
-
+  - 简介
+disqus: "Hilbertear"
 ---
 
 ## 自我介绍

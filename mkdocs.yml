@@ -1,5 +1,5 @@
 site_name: 希尔伯特的眼泪的个人网站
-# site_url: https://dango-f.github.io/mkdocs-site/
+site_url: https://hilbertear.github.io/Hilbertmath/
 site_author: 希尔伯特的眼泪
 site_description: 希尔伯特的眼泪的个人网站
 
@@ -41,6 +41,7 @@ nav:
   - 随笔: write.md
 
 markdown_extensions:
+  - meta
   - pymdownx.arithmatex:
       generic: true
 

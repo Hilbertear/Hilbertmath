@@ -5,6 +5,7 @@ site_description: 希尔伯特的眼泪的个人网站
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - scheme: default #日间模式
       primary: indigo
@@ -49,6 +50,3 @@ extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-extra:
-  disqus: Hilbertear

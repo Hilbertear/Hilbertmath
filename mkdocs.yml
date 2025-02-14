@@ -43,6 +43,7 @@ nav:
       - 简介: write.md
       - 收录: write2.md
       - 随笔: write3.md
+      - 电影: movie.md
 
 markdown_extensions:
   - meta

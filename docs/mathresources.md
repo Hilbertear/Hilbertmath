@@ -20,10 +20,11 @@ comments: true
 
 ### 其他个人主页
 
-石亚龙老师的个人主页:[石亚龙](http://maths.nju.edu.cn/~yshi/)
+[石亚龙](http://maths.nju.edu.cn/~yshi/)老师的个人主页
 
-袁域老师的个人主页:[袁域](https://sites.math.washington.edu/~yuan/)
+[袁域](https://sites.math.washington.edu/~yuan/)老师的个人主页
 
-刘思齐老师的个人主页:[刘思齐](http://blog.siqiliu.com/cn/note/)
+[刘思齐](http://blog.siqiliu.com/cn/note/)老师的个人主页
 
-李思老师的个人主页:[李思](https://sili-math.github.io/)
+[李思](https://sili-math.github.io/)
+老师的个人主页

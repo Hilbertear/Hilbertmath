@@ -1,3 +1,11 @@
+---
+title: "pde"
+date: "2025-02-13"
+tags:
+  - pde
+comments: true
+---
+
 这里会记录我有关 pde 的笔记和讨论班讲稿.
 
 ## 二阶椭圆 PDE

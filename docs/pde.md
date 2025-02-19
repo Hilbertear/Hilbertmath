@@ -18,3 +18,4 @@ comments: true
 [Lax-Milgram 定理](elliptic-pde/note1.pdf)  
 [变分方法和一点泛函分析知识](elliptic-pde/note2.1.pdf)  
 [连续性方法](elliptic-pde/note2.2.pdf)
+[紧性方法](elliptic-pde/note3.pdf)

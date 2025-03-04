@@ -47,3 +47,20 @@ $\displaystyle\int_M\rho\Delta\varphi=-\int_M\nabla\varphi\cdot\nabla\rho=-\lim_
 **总结**:距离函数 Lip,Lip 函数几乎处处可微且有 Stokes 公式.有时候,函数的性质是否用得精细,是决定命题是否能证出的关键因素.
 
 ---
+
+### 2025/3/4 导数之间的控制关系
+
+近期同学们都在为了夏令营考试刷数分高代，我也整理一些内容。
+
+首先是一道经典题目:
+设 $f(x)$在$(a,+\infty)$上$n$ 阶可导.若$\displaystyle\lim_{x\to+\infty} f(x),\lim_{x\to+\infty}f^{(n)}(x)$都存在且有限，则
+$\displaystyle\lim_{x\to+\infty}f^{(k)}\left(x\right)=0,k=1,2,\cdots,n.$
+
+此题解决过程分两步:一是说明各阶导数极限的存在性,可以利用如下逻辑:泰勒展开$\rightarrow$范德蒙行列式$\rightarrow$各阶导数有界$\rightarrow$各阶导数一致连续,利用"$f(x)$有极限，$f'$一致连续，则$f'$有极限",推出极限存在.
+
+第二步比较简单,利用范德蒙行列式说明极限是零.
+
+然后是庞加莱不等式,大概是指 Sobolev 函数的$L^p$范数可以被梯度控制.丘赛曾经考过庞加莱不等式的最优常数问题,记录如下:
+在$\mathbb{R}^n$的有界区域$\Omega$上证明 Poincaré 不等式$\int_\Omega u^2(x)dx\leqslant C\int_{\Omega}|\nabla u|^2(x)dx$
+
+如果$\Omega=(0,a)\times(0,b)$,证明:$C\ge\frac{a^2b^2}{\pi^2(a^2+b^2)}$

@@ -25,4 +25,4 @@ comments: true
 [连续性方法](elliptic-pde/note2.2.pdf)
 [紧性方法](elliptic-pde/note3.pdf)
 
-2025 年春季部分:[第四章和第五章部分内容](elliptic-pde/note3.pdf)
+2025 年春季部分:[第四章和第五章部分内容](elliptic-pde/note4.pdf)

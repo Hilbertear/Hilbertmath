@@ -19,4 +19,6 @@ comments: true
 
 我将在这个网站记录我的个人成长经历和学习心得,有时还会分享一些自己的感受,这是我的知乎账号:[稳重](https://www.zhihu.com/people/wen-zhong-16-88),可以通过知乎的后台私信联系我.
 
+I find it useful by Terrace Tao that"On your web page, keep the personal separated from the professional; your colleagues are visiting your web page to get your papers, preprints, contact info, and curriculum vitae, and are probably not interested in your hobbies or opinions. (Conversely, your friends are probably not interested in your research papers.)" So for those who really wants to see my understanding about math, this is not a good website.One day I will make a new one and currently, you can check it on Zhihu(Chinese version of Quora).
+
 由于 github 服务器的原因,加载过程中可能出现卡顿,请耐心等待~

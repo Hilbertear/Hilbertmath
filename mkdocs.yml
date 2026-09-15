@@ -1,7 +1,7 @@
 site_name: 希尔伯特的眼泪
 site_url: https://hilbertear.github.io/Hilbertmath/
 site_author: 希尔伯特的眼泪
-site_description: 复旦大学博士一年级研究生的个人网站，记录数学学习、学术交流与日常写作
+site_description: 数学笔记与日常写作，收录偏微分方程、几何、阅读与电影中的思考
 repo_url: https://github.com/Hilbertear/Hilbertmath
 repo_name: Hilbertear/Hilbertmath
 edit_uri: ""
@@ -19,13 +19,13 @@ theme:
       accent: orange
       toggle:
         icon: material/weather-night
-        name: Dark Mode
+        name: 切换至深色
     - scheme: slate #夜间模式
       primary: indigo
       accent: orange
       toggle:
         icon: material/weather-sunny
-        name: Light Mode
+        name: 切换至浅色
 
   features:
     - navigation.tabs # 使用tabs分类
@@ -42,6 +42,7 @@ theme:
 
 nav:
   - 首页: index.md
+  - 内容目录: explore.md
   - 数学:
       - 数学首页: math.md
       - 偏微分方程: pde.md
@@ -70,8 +71,8 @@ nav:
       - 资源首页: resources.md
       - 数学资源: mathresources.md
       - 物理资源: phyresources.md
-  - 关于:
-      - 关于我: about.md
+  - 简介:
+      - 简短介绍: about.md
       - 留言板: guestbook.md
   - 标签: tags.md
 
@@ -84,6 +85,7 @@ plugins:
 
 hooks:
   - hooks/validate_comments.py
+  - hooks/content_catalog.py
 
 markdown_extensions:
   - meta
@@ -95,10 +97,12 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/comments.css
+  - stylesheets/editorial.css
 
 extra_javascript:
   - javascripts/config.js
   - javascripts/comments.js
+  - javascripts/reading.js
 
 extra:
   giscus:

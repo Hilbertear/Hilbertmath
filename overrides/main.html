@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page.meta.comments and page.meta.comment_id and (page.meta.date or page.meta.updated) and page.file.src_uri != "guestbook.md" %}
+    <div class="hm-reading-toolbar" data-reading-toolbar hidden>
+      <span class="hm-reading-label">阅读设置</span>
+      <div class="hm-reading-group" role="group" aria-label="正文字号">
+        <button type="button" data-reading-size="small" aria-pressed="false" aria-label="较小字号">小</button>
+        <button type="button" data-reading-size="default" aria-pressed="true" aria-label="默认字号">中</button>
+        <button type="button" data-reading-size="large" aria-pressed="false" aria-label="较大字号">大</button>
+      </div>
+      <div class="hm-reading-group" role="group" aria-label="阅读宽度">
+        <button type="button" data-reading-width="normal" aria-pressed="true">标准</button>
+        <button type="button" data-reading-width="wide" aria-pressed="false">宽屏</button>
+      </div>
+      <button class="hm-save" type="button" data-save-id="{{ page.meta.comment_id | e }}" aria-pressed="false" aria-label="稍后读：{{ page.title | e }}" hidden>稍后读</button>
+      <a href="{{ 'explore/' | url }}">内容目录</a>
+      <span class="hm-reading-status" data-reading-status role="status" aria-live="polite"></span>
+    </div>
+    <progress class="hm-reading-progress" data-reading-progress max="100" value="0" aria-label="阅读进度" hidden></progress>
+    <div class="hm-reading-body" data-reading-body>
+      {{ super() }}
+    </div>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}

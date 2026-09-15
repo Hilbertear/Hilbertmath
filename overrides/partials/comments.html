@@ -1,52 +1,48 @@
 {% if page.meta.comments %}
-<h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
-<script
-  src="https://giscus.app/client.js"
-  data-repo="Hilbertear/Hilbertmath"
-  data-repo-id="R_kgDON0o4Vg"
-  data-category="Announcements"
-  data-category-id="DIC_kwDON0o4Vs4Cm7M4"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="bottom"
-  data-theme="preferred_color_scheme"
-  data-lang="zh-CN"
-  crossorigin="anonymous"
-  async
-></script>
+{% set g = config.extra.giscus %}
+<section
+  class="hm-comments"
+  data-giscus-root
+  data-state="idle"
+  data-repo="{{ g.repo | e }}"
+  data-repo-id="{{ g.repo_id | e }}"
+  data-category="{{ g.category | e }}"
+  data-category-id="{{ g.category_id | e }}"
+  data-mapping="{{ page.meta.comment_mapping | default('specific', true) | e }}"
+  data-term="{{ page.meta.comment_term | default(page.meta.comment_id, true) | e }}"
+>
+  <h2 id="__comments">讨论</h2>
+  <p class="hm-comments__intro">
+    欢迎补充、订正或交流。评论由 GitHub Discussions 提供，需要登录 GitHub。
+  </p>
 
-<!-- Synchronize Giscus theme with palette -->
-<script>
-  var giscus = document.querySelector("script[src*=giscus]");
+  <div class="hm-comments__status" data-giscus-status>
+    <div class="hm-comments__status-copy" data-giscus-status-copy role="status" aria-live="polite" tabindex="-1">
+      <span class="hm-comments__status-dot" aria-hidden="true"></span>
+      <span data-giscus-status-text>滚动到这里后会自动加载评论。</span>
+    </div>
+    <button class="hm-comments__button" type="button" data-giscus-load>立即加载</button>
+  </div>
 
-  // Set palette on initial load
-  var palette = __md_get("__palette");
-  if (palette && typeof palette.color === "object") {
-    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+  <div class="hm-comments__mount" data-giscus-mount></div>
 
-    // Instruct Giscus to set theme
-    giscus.setAttribute("data-theme", theme);
-  }
+  <div class="hm-comments__fallback" data-giscus-fallback role="alert" tabindex="-1" hidden>
+    <span data-giscus-error-text>评论暂时无法加载。</span>
+    <button class="hm-comments__button" type="button" data-giscus-retry>重试</button>
+    <a
+      class="hm-comments__link"
+      data-giscus-direct
+      href="{{ page.meta.comment_direct_url | default(g.discussions_url, true) | e }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >前往 GitHub Discussions</a>
+  </div>
 
-  // Register event handlers after documented loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    var ref = document.querySelector("[data-md-component=palette]");
-    ref.addEventListener("change", function () {
-      var palette = __md_get("__palette");
-      if (palette && typeof palette.color === "object") {
-        var theme =
-          palette.color.scheme === "slate" ? "transparent_dark" : "light";
-
-        // Instruct Giscus to change theme
-        var frame = document.querySelector(".giscus-frame");
-        frame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme } } },
-          "https://giscus.app"
-        );
-      }
-    });
-  });
-</script>
+  <noscript>
+    <p>
+      请启用 JavaScript，或直接前往
+      <a href="{{ page.meta.comment_direct_url | default(g.discussions_url, true) | e }}">GitHub Discussions</a>。
+    </p>
+  </noscript>
+</section>
 {% endif %}

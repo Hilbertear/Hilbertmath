@@ -1,11 +1,18 @@
 site_name: 希尔伯特的眼泪
 site_url: https://hilbertear.github.io/Hilbertmath/
 site_author: 希尔伯特的眼泪
-site_description: 希尔伯特的眼泪的个人网站
+site_description: 复旦大学博士一年级研究生的个人网站，记录数学学习、学术交流与日常写作
+repo_url: https://github.com/Hilbertear/Hilbertmath
+repo_name: Hilbertear/Hilbertmath
+edit_uri: ""
+copyright: Copyright &copy; 2025–2026 希尔伯特的眼泪
 
 theme:
   name: material
   custom_dir: overrides
+  font: false
+  icon:
+    logo: material/math-integral
   palette:
     - scheme: default #日间模式
       primary: indigo
@@ -23,34 +30,87 @@ theme:
   features:
     - navigation.tabs # 使用tabs分类
     - navigation.tabs.sticky
-    - navigation.expand # 展开导航
+    - navigation.sections
     - navigation.top # 回到顶部
-    - navigation.suggest # 搜索补全
-    - navigation.highlight # 高亮关键词
+    - search.suggest # 搜索补全
+    - search.highlight # 高亮关键词
+    - search.share
     - navigation.indexes # 索引
+    - navigation.footer
+    - toc.follow
   language: zh
 
 nav:
-  - 主页: index.md
-  - 笔记与讲稿:
-      - PDE: pde.md
+  - 首页: index.md
+  - 数学:
+      - 数学首页: math.md
+      - 偏微分方程: pde.md
       - 几何: geometry.md
-      - 一些数学感悟: thoughts.md
-  - 学习资源:
-      - 数学: mathresources.md
-      - 物理: phyresources.md
-  - 创作:
-      - 简介: write.md
-      - 收录: write2.md
-      - 随笔: write3.md
+      - 数学随想:
+          - 导览: thoughts.md
+          - 导数之间的控制关系: math/reflections/controlling-derivatives.md
+          - 距离函数的拉普拉斯: math/reflections/distance-function-laplacian.md
+  - 写作:
+      - 写作首页: write.md
+      - 随笔:
+          - 导览: write3.md
+          - 快要枯竭: writing/essays/running-dry.md
+          - 用电影眼看世界: writing/essays/seeing-the-world-through-film.md
+          - 别恨我: writing/essays/do-not-hate-me.md
+          - 要考试作甚: writing/essays/why-take-exams.md
+          - 普遍性青年存在主义危机: writing/essays/youth-existential-crisis.md
+          - 爱的反思: writing/essays/reflections-on-love.md
+      - 阅读摘记:
+          - 导览: write2.md
+          - 读《聪明的投资者》: writing/reading/intelligent-investor.md
+          - 《惰者集》与机械训练: writing/reading/practice-and-learning.md
+          - 《恋人絮语》与肉麻: writing/reading/lover-discourse.md
       - 电影: movie.md
+  - 资源:
+      - 资源首页: resources.md
+      - 数学资源: mathresources.md
+      - 物理资源: phyresources.md
+  - 关于:
+      - 关于我: about.md
+      - 留言板: guestbook.md
+  - 标签: tags.md
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - tags
+
+hooks:
+  - hooks/validate_comments.py
 
 markdown_extensions:
   - meta
+  - attr_list
+  - md_in_html
   - pymdownx.arithmatex:
       generic: true
 
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/comments.css
+
 extra_javascript:
   - javascripts/config.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/comments.js
+
+extra:
+  giscus:
+    repo: Hilbertear/Hilbertmath
+    repo_id: R_kgDON0o4Vg
+    category: Announcements
+    category_id: DIC_kwDON0o4Vs4Cm7M4
+    discussions_url: https://github.com/Hilbertear/Hilbertmath/discussions
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Hilbertear
+      name: GitHub
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/wen-zhong-16-88
+      name: 知乎

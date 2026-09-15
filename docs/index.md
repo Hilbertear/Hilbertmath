@@ -1,24 +1,65 @@
 ---
-title: "自我介绍"
-date: "2025-02-13"
-tags:
-  - 简介
-disqus: "Hilbertear"
-comments: true
+title: "希尔伯特的眼泪"
+description: "复旦大学博士一年级研究生的个人网站，记录数学学习、学术交流与日常写作。"
+hide:
+  - toc
+comments: false
 ---
 
-## 自我介绍
+<div class="hm-hero" markdown>
 
-我学数学，来自南京大学.
+<span class="hm-eyebrow">数学 · 物理 · 写作</span>
 
-我喜欢数学和物理.
+# 希尔伯特的眼泪
 
-我的 MBTI 是 ENFJ.我偶尔 J,时常 P,在必要时刻会发挥的 Fe 功能,我正在试图培养我的 Ti 能力.我经常性地渴求与他人产生链接,讨论、陪伴总是好的.
+我目前是复旦大学博士一年级研究生，本科阶段在南京大学学习数学。这里收录我对偏微分方程与几何的学习，也保存阅读、电影和生活留下的文字。
 
-在我高中的时候我便憧憬着制作自己的网站,然而本科读了数学,代码能力不强.尽管我自己也学了一点 HTML,CSS 和 git,但仍然没能独立创建个人博客,这个网站是我的好朋友使用[这个方法](https://mkdoc-material.llango.com/)帮我做的.
+<div class="hm-actions" markdown>
+[浏览数学笔记](math.md){ .md-button .md-button--primary }
+[阅读随笔](write3.md){ .md-button }
+</div>
 
-我将在这个网站记录我的个人成长经历和学习心得,有时还会分享一些自己的感受,这是我的知乎账号:[稳重](https://www.zhihu.com/people/wen-zhong-16-88),可以通过知乎的后台私信联系我.
+</div>
 
-I find it useful by Terrace Tao that"On your web page, keep the personal separated from the professional; your colleagues are visiting your web page to get your papers, preprints, contact info, and curriculum vitae, and are probably not interested in your hobbies or opinions. (Conversely, your friends are probably not interested in your research papers.)" So for those who really wants to see my understanding about math, this is not a good website.One day I will make a new one and currently, you can check it on Zhihu(Chinese version of Quora).
+## 从这里开始
 
-由于 github 服务器的原因,加载过程中可能出现卡顿,请耐心等待~
+<div class="hm-card-grid" markdown>
+
+-   **数学笔记与讲稿**
+
+    椭圆型偏微分方程、调和多项式、Bochner 技巧，以及讨论班中整理的讲稿。
+
+    [查看数学笔记与讲稿 →](math.md)
+
+-   **个人写作**
+
+    关于成长、关系、阅读与存在感受的随笔，保留思考发生时的温度。
+
+    [阅读随笔 →](write3.md)
+
+-   **学习资源**
+
+    我使用过或愿意推荐的数学、物理与计算机学习材料。
+
+    [查看学习资源 →](resources.md)
+
+</div>
+
+## 近期精选
+
+<div class="hm-update-list" markdown>
+
+- **2026-05-19** · [快要枯竭](writing/essays/running-dry.md)<br>
+  关于数学、现代性与无聊的一次阶段性记录。
+
+- **2026-02-03** · [用电影眼看世界](writing/essays/seeing-the-world-through-film.md)<br>
+  在罗马的一段巴士旅程中，重新拾起观看世界的方式。
+
+- **2025-03-04** · [导数之间的控制关系](math/reflections/controlling-derivatives.md)<br>
+  从高阶导数的极限谈到 Poincaré 不等式。
+
+</div>
+
+## 关于这个网站
+
+我希望它既能让同行和同学快速找到数学材料，也能让朋友读到数学之外的我。[阅读更完整的介绍 →](about.md)

@@ -1,11 +1,20 @@
 ---
 title: "物理资源"
-date: "2025-02-13"
-tags:
-  - 物理资源
-comments: true
+description: "学术报告、公开课与物理学习网站。"
+comments: false
 ---
 
-### 一些网站
+# 物理资源
 
-[蔻享](https://www.koushare.com/)是一个很好的学术网站，包含很多学术大佬的直播与视频，例如 Michael Berry 爵士就曾在其中做过名为*Geometric phases old and new*的报告(事实上在南大现工院也做过同名报告，PPT 略有改动)。
+目前先从学术报告平台开始整理。随着实际使用，我会继续补充课程、书目与观看建议。
+
+## 网站与报告
+
+<div class="hm-resource-list" markdown>
+
+- [蔻享学术](https://www.koushare.com/)<br>
+  **学术报告平台** · 中文 / 英文 · 包含大量数学与物理报告直播及回放。Michael Berry 爵士曾在其中做过题为 *Geometric phases old and new* 的报告；他也曾在南京大学现代工程与应用科学学院做过同名报告，PPT 略有改动。
+
+</div>
+
+> 这个分区仍在生长。如果你有值得长期保留的资源，欢迎在[留言板](guestbook.md)告诉我。

@@ -1,0 +1,8 @@
+# Generated site output
+site/
+
+# Local build and editor artifacts
+.cache/
+__pycache__/
+.DS_Store
+Thumbs.db

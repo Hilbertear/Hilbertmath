@@ -98,11 +98,17 @@ extra_css:
   - stylesheets/extra.css
   - stylesheets/comments.css
   - stylesheets/editorial.css
+  - stylesheets/content-motion.css
+  - stylesheets/math-playground.css
+  - stylesheets/reading-delight.css
 
 extra_javascript:
   - javascripts/config.js
   - javascripts/comments.js
   - javascripts/reading.js
+  - javascripts/content-motion.js
+  - javascripts/math-playground.js
+  - javascripts/reading-delight.js
 
 extra:
   giscus:

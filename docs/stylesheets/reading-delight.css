@@ -1,0 +1,195 @@
+/* Reading enhancements stay local to the article; navigation and preferences remain available. */
+html[data-reading-focus="true"] .md-sidebar--secondary {
+  display: none;
+}
+
+html[data-reading-focus="true"] .md-content {
+  min-width: 0;
+}
+
+html[data-reading-focus="true"] .md-main__inner {
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 76.25em) {
+  html[data-reading-focus="true"] .md-sidebar--primary {
+    display: none;
+  }
+}
+
+.hm-focus-exit {
+  position: fixed;
+  z-index: 6;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  min-height: 2.2rem;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid var(--hm-line);
+  border-radius: 999px;
+  background: var(--hm-paper-raised);
+  color: var(--hm-ink-strong);
+  box-shadow: 0 4px 20px rgb(0 0 0 / 8%);
+  font-family: var(--hm-sans);
+  font-size: 0.68rem;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.hm-focus-exit[hidden] {
+  display: none;
+}
+
+.hm-focus-exit:hover {
+  border-color: var(--hm-gold);
+}
+
+.hm-focus-toggle:focus-visible,
+.hm-focus-exit:focus-visible,
+.hm-image-zoom:focus-visible,
+.hm-image-dialog__close:focus-visible {
+  outline: 2px solid var(--hm-gold);
+  outline-offset: 4px;
+}
+
+.md-typeset .hm-image-zoom {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: inherit;
+  line-height: 0;
+  cursor: zoom-in;
+}
+
+.md-typeset .hm-image-zoom img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.hm-image-zoom::after {
+  content: "放大查看 ↗";
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--hm-line);
+  border-radius: 0.25rem;
+  background: var(--hm-paper-raised);
+  color: var(--hm-ink-strong);
+  font-family: var(--hm-sans);
+  font-size: 0.6rem;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: opacity 160ms ease, transform 160ms ease;
+  pointer-events: none;
+}
+
+.hm-image-zoom:hover::after,
+.hm-image-zoom:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+
+html[data-reading-image-open="true"] {
+  overflow: hidden;
+}
+
+.hm-image-dialog {
+  width: fit-content;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 0.9rem;
+  overflow: auto;
+  border: 1px solid var(--hm-line);
+  border-radius: 0.5rem;
+  background: var(--hm-paper-raised);
+  color: var(--hm-ink-strong);
+  box-shadow: 0 20px 80px rgb(0 0 0 / 20%);
+}
+
+.hm-image-dialog::backdrop {
+  background: rgb(9 18 29 / 78%);
+}
+
+.hm-image-dialog figure {
+  margin: 0;
+}
+
+.hm-image-dialog__close {
+  display: block;
+  min-height: 2.2rem;
+  margin: 0 0 0.65rem auto;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--hm-line);
+  border-radius: 0.25rem;
+  background: transparent;
+  color: inherit;
+  font-family: var(--hm-sans);
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.hm-image-dialog__close:hover {
+  border-color: var(--hm-gold);
+}
+
+.hm-image-dialog__image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 10rem);
+  max-height: calc(100dvh - 10rem);
+  width: auto;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+}
+
+.hm-image-dialog__caption {
+  max-width: 55rem;
+  margin: 0.75rem auto 0;
+  color: var(--hm-muted);
+  font-family: var(--hm-sans);
+  font-size: 0.7rem;
+  line-height: 1.7;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+@media (hover: none) {
+  .hm-image-zoom::after {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+html[data-hm-motion="off"] .hm-focus-exit,
+html[data-hm-motion="off"] .hm-image-zoom::after {
+  transition: none;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-focus-exit,
+  .hm-image-zoom::after {
+    transition: none;
+    transform: none;
+  }
+}
+
+@media print {
+  .hm-focus-exit,
+  .hm-image-dialog,
+  .hm-image-zoom::after {
+    display: none !important;
+  }
+}

@@ -1,0 +1,1689 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="数学笔记与日常写作：偏微分方程、几何、阅读、电影与随笔。">
+      
+      
+        <meta name="author" content="希尔伯特的眼泪">
+      
+      
+        <link rel="canonical" href="https://hilbertear.github.io/Hilbertmath/">
+      
+      
+      
+        <link rel="next" href="explore/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+    
+    
+      
+        <title>希尔伯特的眼泪 - 希尔伯特的眼泪</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="stylesheets/comments.css">
+    
+      <link rel="stylesheet" href="stylesheets/editorial.css">
+    
+      <link rel="stylesheet" href="stylesheets/content-motion.css">
+    
+      <link rel="stylesheet" href="stylesheets/math-playground.css">
+    
+      <link rel="stylesheet" href="stylesheets/reading-delight.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="." title="希尔伯特的眼泪" class="md-header__button md-logo" aria-label="希尔伯特的眼泪" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.5 19.1c-.2 1.1-.6 1.9-1.3 2.4s-1.6.6-2.7.4c-.4-.1-1.2-.2-1.5-.4l.5-1.5c.3.1.9.3 1.2.3 1.1.2 1.7-.3 1.9-1.5L12 5.2c.2-1.2.7-2 1.4-2.6.7-.5 1.7-.7 2.8-.5.4.1 1.2.2 1.8.5L17.5 4c-.2-.1-.9-.2-1.2-.3-1.3-.2-2 .4-2.3 1.9z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            希尔伯特的眼泪
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              希尔伯特的眼泪
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至深色"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至浅色"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Hilbertear/Hilbertmath" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Hilbertear/Hilbertmath
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="explore/" class="md-tabs__link">
+        
+  
+    
+  
+  内容目录
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="math/" class="md-tabs__link">
+          
+  
+    
+  
+  数学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="write/" class="md-tabs__link">
+          
+  
+    
+  
+  写作
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="resources/" class="md-tabs__link">
+          
+  
+    
+  
+  资源
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="about/" class="md-tabs__link">
+          
+  
+    
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="tags/" class="md-tabs__link">
+        
+  
+    
+  
+  标签
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="希尔伯特的眼泪" class="md-nav__button md-logo" aria-label="希尔伯特的眼泪" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.5 19.1c-.2 1.1-.6 1.9-1.3 2.4s-1.6.6-2.7.4c-.4-.1-1.2-.2-1.5-.4l.5-1.5c.3.1.9.3 1.2.3 1.1.2 1.7-.3 1.9-1.5L12 5.2c.2-1.2.7-2 1.4-2.6.7-.5 1.7-.7 2.8-.5.4.1 1.2.2 1.8.5L17.5 4c-.2-.1-.9-.2-1.2-.3-1.3-.2-2 .4-2.3 1.9z"/></svg>
+
+    </a>
+    希尔伯特的眼泪
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Hilbertear/Hilbertmath" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Hilbertear/Hilbertmath
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容目录
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="explore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内容目录
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            数学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    偏微分方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="geometry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    几何
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学随想
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            数学随想
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="thoughts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    导览
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math/reflections/controlling-derivatives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    导数之间的控制关系
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math/reflections/distance-function-laplacian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    距离函数的拉普拉斯
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    写作
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            写作
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="write/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    写作首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    随笔
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            随笔
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="write3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    导览
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing/essays/running-dry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    快要枯竭
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing/essays/seeing-the-world-through-film/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    用电影眼看世界
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing/essays/do-not-hate-me/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    别恨我
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing/essays/why-take-exams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    要考试作甚
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing/essays/youth-existential-crisis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    普遍性青年存在主义危机
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing/essays/reflections-on-love/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    爱的反思
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    阅读摘记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            阅读摘记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="write2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    导览
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing/reading/intelligent-investor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    读《聪明的投资者》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing/reading/practice-and-learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《惰者集》与机械训练
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing/reading/lover-discourse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《恋人絮语》与肉麻
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="movie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电影
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    资源
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            资源
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    资源首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mathresources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学资源
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="phyresources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    物理资源
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    简介
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简短介绍
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guestbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    留言板
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    标签
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容目录
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+    
+                  
+  
+
+
+
+
+<div class="hm-editorial-hero">
+<div class="hm-editorial-intro">
+<p class="hm-eyebrow">HILBERTMATH · NOTES &amp; ESSAYS</p>
+<h1 id="_1">数学笔记与日常写作</h1>
+<p>从偏微分方程与几何，到阅读、电影和生活。这里收录一些推导、问题，以及尚在继续的思考。</p>
+<div class="hm-editorial-links">
+<p><a href="#content">开始阅读 ↓</a>
+<a href="resources/">学习资源 ↗</a></p>
+</div>
+</div>
+<!-- md_in_html requires nested block-opening tags to use at most three leading spaces. -->
+<figure aria-labelledby="hm-math-caption" class="hm-math-playground" data-hm-playground="data-hm-playground">
+<figcaption id="hm-math-caption"><span>相位之间</span><span class="hm-math-kicker">LISSAJOUS <span data-hm-current-ratio>2 : 3</span></span></figcaption>
+  <svg data-hm-curve class="hm-math-curve" viewBox="0 0 360 172" role="img" aria-labelledby="hm-math-title hm-math-description">
+    <title id="hm-math-title">利萨如曲线：频率比 2 比 3，相位 45 度</title>
+    <desc id="hm-math-description">两组不同频率的正弦振动组成闭合曲线。可使用下方频率按钮和相位滑块改变形状。</desc>
+    <g class="hm-math-grid" aria-hidden="true"><path d="M64 23V149M122 23V149M180 17V155M238 23V149M296 23V149M64 23H296M64 54.5H296M56 86H304M64 117.5H296M64 149H296"/></g>
+    <g class="hm-math-axes" aria-hidden="true"><path d="M56 86H304M180 17V155"/><text x="309" y="90">x</text><text x="175" y="12">y</text></g>
+    <path data-hm-trace class="hm-math-trace" pathLength="1" d="M262.02,86.00 L267.55,79.41 L272.64,72.90 L277.29,66.53 L281.46,60.38 L285.13,54.50 L288.30,48.97 L290.93,43.84 L293.03,39.18 L294.57,35.03 L295.56,31.44 L295.98,28.45 L295.84,26.08 L295.14,24.38 L293.87,23.35 L292.05,23.00 L289.68,23.35 L286.78,24.38 L283.36,26.08 L279.43,28.45 L275.02,31.44 L270.15,35.03 L264.84,39.18 L259.11,43.84 L253.00,48.97 L246.53,54.50 L239.74,60.38 L232.66,66.53 L225.32,72.90 L217.77,79.41 L210.02,86.00 L202.13,92.59 L194.14,99.10 L186.07,105.47 L177.98,111.62 L169.89,117.50 L161.85,123.03 L153.91,128.16 L146.08,132.82 L138.43,136.97 L130.98,140.56 L123.76,143.55 L116.82,145.92 L110.19,147.62 L103.90,148.65 L97.98,149.00 L92.45,148.65 L87.36,147.62 L82.71,145.92 L78.54,143.55 L74.87,140.56 L71.70,136.97 L69.07,132.82 L66.97,128.16 L65.43,123.03 L64.44,117.50 L64.02,111.62 L64.16,105.47 L64.86,99.10 L66.13,92.59 L67.95,86.00 L70.32,79.41 L73.22,72.90 L76.64,66.53 L80.57,60.38 L84.98,54.50 L89.85,48.97 L95.16,43.84 L100.89,39.18 L107.00,35.03 L113.47,31.44 L120.26,28.45 L127.34,26.08 L134.68,24.38 L142.23,23.35 L149.98,23.00 L157.87,23.35 L165.86,24.38 L173.93,26.08 L182.02,28.45 L190.11,31.44 L198.15,35.03 L206.09,39.18 L213.92,43.84 L221.57,48.97 L229.02,54.50 L236.24,60.38 L243.18,66.53 L249.81,72.90 L256.10,79.41 L262.02,86.00 L267.55,92.59 L272.64,99.10 L277.29,105.47 L281.46,111.62 L285.13,117.50 L288.30,123.03 L290.93,128.16 L293.03,132.82 L294.57,136.97 L295.56,140.56 L295.98,143.55 L295.84,145.92 L295.14,147.62 L293.87,148.65 L292.05,149.00 L289.68,148.65 L286.78,147.62 L283.36,145.92 L279.43,143.55 L275.02,140.56 L270.15,136.97 L264.84,132.82 L259.11,128.16 L253.00,123.03 L246.53,117.50 L239.74,111.62 L232.66,105.47 L225.32,99.10 L217.77,92.59 L210.02,86.00 L202.13,79.41 L194.14,72.90 L186.07,66.53 L177.98,60.38 L169.89,54.50 L161.85,48.97 L153.91,43.84 L146.08,39.18 L138.43,35.03 L130.98,31.44 L123.76,28.45 L116.82,26.08 L110.19,24.38 L103.90,23.35 L97.98,23.00 L92.45,23.35 L87.36,24.38 L82.71,26.08 L78.54,28.45 L74.87,31.44 L71.70,35.03 L69.07,39.18 L66.97,43.84 L65.43,48.97 L64.44,54.50 L64.02,60.38 L64.16,66.53 L64.86,72.90 L66.13,79.41 L67.95,86.00 L70.32,92.59 L73.22,99.10 L76.64,105.47 L80.57,111.62 L84.98,117.50 L89.85,123.03 L95.16,128.16 L100.89,132.82 L107.00,136.97 L113.47,140.56 L120.26,143.55 L127.34,145.92 L134.68,147.62 L142.23,148.65 L149.98,149.00 L157.87,148.65 L165.86,147.62 L173.93,145.92 L182.02,143.55 L190.11,140.56 L198.15,136.97 L206.09,132.82 L213.92,128.16 L221.57,123.03 L229.02,117.50 L236.24,111.62 L243.18,105.47 L249.81,99.10 L256.10,92.59 L262.02,86.00"/>
+    <path data-hm-highlight class="hm-math-highlight" pathLength="1" aria-hidden="true" d="M262.02,86.00 L267.55,79.41 L272.64,72.90 L277.29,66.53 L281.46,60.38 L285.13,54.50 L288.30,48.97 L290.93,43.84 L293.03,39.18 L294.57,35.03 L295.56,31.44 L295.98,28.45 L295.84,26.08 L295.14,24.38 L293.87,23.35 L292.05,23.00 L289.68,23.35 L286.78,24.38 L283.36,26.08 L279.43,28.45 L275.02,31.44 L270.15,35.03 L264.84,39.18 L259.11,43.84 L253.00,48.97 L246.53,54.50 L239.74,60.38 L232.66,66.53 L225.32,72.90 L217.77,79.41 L210.02,86.00 L202.13,92.59 L194.14,99.10 L186.07,105.47 L177.98,111.62 L169.89,117.50 L161.85,123.03 L153.91,128.16 L146.08,132.82 L138.43,136.97 L130.98,140.56 L123.76,143.55 L116.82,145.92 L110.19,147.62 L103.90,148.65 L97.98,149.00 L92.45,148.65 L87.36,147.62 L82.71,145.92 L78.54,143.55 L74.87,140.56 L71.70,136.97 L69.07,132.82 L66.97,128.16 L65.43,123.03 L64.44,117.50 L64.02,111.62 L64.16,105.47 L64.86,99.10 L66.13,92.59 L67.95,86.00 L70.32,79.41 L73.22,72.90 L76.64,66.53 L80.57,60.38 L84.98,54.50 L89.85,48.97 L95.16,43.84 L100.89,39.18 L107.00,35.03 L113.47,31.44 L120.26,28.45 L127.34,26.08 L134.68,24.38 L142.23,23.35 L149.98,23.00 L157.87,23.35 L165.86,24.38 L173.93,26.08 L182.02,28.45 L190.11,31.44 L198.15,35.03 L206.09,39.18 L213.92,43.84 L221.57,48.97 L229.02,54.50 L236.24,60.38 L243.18,66.53 L249.81,72.90 L256.10,79.41 L262.02,86.00 L267.55,92.59 L272.64,99.10 L277.29,105.47 L281.46,111.62 L285.13,117.50 L288.30,123.03 L290.93,128.16 L293.03,132.82 L294.57,136.97 L295.56,140.56 L295.98,143.55 L295.84,145.92 L295.14,147.62 L293.87,148.65 L292.05,149.00 L289.68,148.65 L286.78,147.62 L283.36,145.92 L279.43,143.55 L275.02,140.56 L270.15,136.97 L264.84,132.82 L259.11,128.16 L253.00,123.03 L246.53,117.50 L239.74,111.62 L232.66,105.47 L225.32,99.10 L217.77,92.59 L210.02,86.00 L202.13,79.41 L194.14,72.90 L186.07,66.53 L177.98,60.38 L169.89,54.50 L161.85,48.97 L153.91,43.84 L146.08,39.18 L138.43,35.03 L130.98,31.44 L123.76,28.45 L116.82,26.08 L110.19,24.38 L103.90,23.35 L97.98,23.00 L92.45,23.35 L87.36,24.38 L82.71,26.08 L78.54,28.45 L74.87,31.44 L71.70,35.03 L69.07,39.18 L66.97,43.84 L65.43,48.97 L64.44,54.50 L64.02,60.38 L64.16,66.53 L64.86,72.90 L66.13,79.41 L67.95,86.00 L70.32,92.59 L73.22,99.10 L76.64,105.47 L80.57,111.62 L84.98,117.50 L89.85,123.03 L95.16,128.16 L100.89,132.82 L107.00,136.97 L113.47,140.56 L120.26,143.55 L127.34,145.92 L134.68,147.62 L142.23,148.65 L149.98,149.00 L157.87,148.65 L165.86,147.62 L173.93,145.92 L182.02,143.55 L190.11,140.56 L198.15,136.97 L206.09,132.82 L213.92,128.16 L221.57,123.03 L229.02,117.50 L236.24,111.62 L243.18,105.47 L249.81,99.10 L256.10,92.59 L262.02,86.00"/>
+    <circle data-hm-point class="hm-math-point" cx="262.02" cy="86" r="2.6" aria-hidden="true"/>
+  </svg>
+  <p class="hm-math-formula" data-hm-formula="data-hm-formula">x = sin(2t + φ); y = sin(3t)</p>
+<div class="hm-math-controls" data-hm-math-controls="data-hm-math-controls" hidden="hidden">
+<div aria-label="选择频率比" class="hm-math-ratios" role="group">
+      <button type="button" data-hm-ratio="2:3" aria-pressed="true">2 : 3</button>
+      <button type="button" data-hm-ratio="3:4" aria-pressed="false">3 : 4</button>
+      <button type="button" data-hm-ratio="5:6" aria-pressed="false">5 : 6</button>
+    </div>
+    <label class="hm-math-phase" for="hm-math-phase"><span>相位 φ</span><input id="hm-math-phase" data-hm-phase type="range" min="0" max="360" value="45" step="1" aria-describedby="hm-math-hint"><output data-hm-phase-value for="hm-math-phase" aria-live="off">45°</output></label>
+<div class="hm-math-transport"><button type="button" data-hm-play aria-pressed="false">播放</button><button type="button" data-hm-reset>复位</button><span id="hm-math-hint">拖动曲线或调节相位</span></div>
+</div>
+<noscript>
+<p class="hm-math-static-note">频率比 2 : 3，相位 45°。启用 JavaScript 后可调节曲线。</p>
+</noscript>
+</figure>
+</div>
+<div class="hm-section-heading">
+<h2 id="content">内容目录</h2>
+<p>按主题寻找，也可以从最近的文字读起。</p>
+</div>
+<section class="hm-library" data-library data-library-default-scope="all" aria-label="内容目录"><div class="hm-library-controls" data-library-controls hidden><div class="hm-library-scopes" role="group" aria-label="内容分区"><button type="button" data-library-scope="all" aria-pressed="true">全部</button><button type="button" data-library-scope="math" aria-pressed="false">数学</button><button type="button" data-library-scope="writing" aria-pressed="false">写作</button></div><div class="hm-library-filters"><label class="hm-library-search"><span>搜索内容</span><input type="search" data-library-query placeholder="标题、摘要或主题" autocomplete="off"></label><label><span>年份</span><select data-library-year><option value="">全部年份</option><option value="2026">2026 年</option><option value="2025">2025 年</option><option value="2024">2024 年</option></select></label><label><span>主题</span><select data-library-topic><option value="">全部主题</option><option value="偏微分方程">偏微分方程</option><option value="成长与自省">成长与自省</option><option value="投资">投资</option><option value="教育">教育</option><option value="数学分析">数学分析</option><option value="数学学习">数学学习</option><option value="数学随想">数学随想</option><option value="旅行">旅行</option><option value="泛函分析">泛函分析</option><option value="爱与关系">爱与关系</option><option value="电影">电影</option><option value="调和分析">调和分析</option><option value="阅读摘记">阅读摘记</option><option value="随笔">随笔</option><option value="黎曼几何">黎曼几何</option></select></label><button class="hm-save" type="button" data-library-saved aria-pressed="false">稍后读</button></div><p class="hm-library-local-note">稍后读仅保存在本浏览器，无需登录，不会上传。</p></div><p class="hm-library-status" data-library-count role="status" aria-live="polite">共 20 项内容</p><p class="hm-library-status" data-library-status role="status" aria-live="polite"></p><div class="hm-library-results" data-library-results><article class="hm-entry" data-entry data-id="essay-2026-05-19-running-dry" data-scope="writing" data-year="2026" data-topics="[&quot;随笔&quot;, &quot;数学学习&quot;, &quot;成长与自省&quot;]" data-search="快要枯竭 在数学、现代性与持续进步的拉扯中感到枯竭，并追问好奇心是否正在被耗尽。 随笔  随笔 数学学习 成长与自省"><div class="hm-entry-meta"><span>随笔</span><time datetime="2026-05-19">2026-05-19</time></div><h3 class="hm-entry-title"><a href="writing/essays/running-dry/">快要枯竭</a></h3><p class="hm-entry-summary">在数学、现代性与持续进步的拉扯中感到枯竭，并追问好奇心是否正在被耗尽。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>随笔</span><span>数学学习</span><span>成长与自省</span></div><button class="hm-save" type="button" data-save-id="essay-2026-05-19-running-dry" aria-pressed="false" aria-label="稍后读：快要枯竭" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="essay-2026-02-03-do-not-hate-me" data-scope="writing" data-year="2026" data-topics="[&quot;随笔&quot;, &quot;爱与关系&quot;]" data-search="别恨我 憎恶会扩散，但情绪的爆发不必以伤害收场。 随笔  随笔 爱与关系"><div class="hm-entry-meta"><span>随笔</span><time datetime="2026-02-03">2026-02-03</time></div><h3 class="hm-entry-title"><a href="writing/essays/do-not-hate-me/">别恨我</a></h3><p class="hm-entry-summary">憎恶会扩散，但情绪的爆发不必以伤害收场。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>随笔</span><span>爱与关系</span></div><button class="hm-save" type="button" data-save-id="essay-2026-02-03-do-not-hate-me" aria-pressed="false" aria-label="稍后读：别恨我" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="essay-2026-02-03-seeing-the-world-through-film" data-scope="writing" data-year="2026" data-topics="[&quot;随笔&quot;, &quot;电影&quot;, &quot;旅行&quot;]" data-search="用电影眼看世界 在罗马的一段巴士旅程中，重新拾起观看世界的方式。 随笔  随笔 电影 旅行"><div class="hm-entry-meta"><span>随笔</span><time datetime="2026-02-03">2026-02-03</time></div><h3 class="hm-entry-title"><a href="writing/essays/seeing-the-world-through-film/">用电影眼看世界</a></h3><p class="hm-entry-summary">在罗马的一段巴士旅程中，重新拾起观看世界的方式。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>随笔</span><span>电影</span><span>旅行</span></div><button class="hm-save" type="button" data-save-id="essay-2026-02-03-seeing-the-world-through-film" aria-pressed="false" aria-label="稍后读：用电影眼看世界" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="essay-2026-01-09-why-take-exams" data-scope="writing" data-year="2026" data-topics="[&quot;随笔&quot;, &quot;数学学习&quot;, &quot;教育&quot;, &quot;成长与自省&quot;]" data-search="随想录：要考试作甚 一场失败的概率论口试，和关于理解、虚荣与学习方式的自省。 随笔  随笔 数学学习 教育 成长与自省"><div class="hm-entry-meta"><span>随笔</span><time datetime="2026-01-09">2026-01-09</time></div><h3 class="hm-entry-title"><a href="writing/essays/why-take-exams/">随想录：要考试作甚</a></h3><p class="hm-entry-summary">一场失败的概率论口试，和关于理解、虚荣与学习方式的自省。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>随笔</span><span>数学学习</span><span>教育</span><span>成长与自省</span></div><button class="hm-save" type="button" data-save-id="essay-2026-01-09-why-take-exams" aria-pressed="false" aria-label="稍后读：随想录：要考试作甚" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="reading-2025-12-15-intelligent-investor" data-scope="writing" data-year="2025" data-topics="[&quot;阅读摘记&quot;, &quot;投资&quot;]" data-search="读《聪明的投资者》：理性与投机 以投资新手的视角反思投机、理性、模型局限，以及半懂不懂时的自负。 阅读摘记  阅读摘记 投资"><div class="hm-entry-meta"><span>阅读摘记</span><time datetime="2025-12-15">2025-12-15</time></div><h3 class="hm-entry-title"><a href="writing/reading/intelligent-investor/">读《聪明的投资者》：理性与投机</a></h3><p class="hm-entry-summary">以投资新手的视角反思投机、理性、模型局限，以及半懂不懂时的自负。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>阅读摘记</span><span>投资</span></div><button class="hm-save" type="button" data-save-id="reading-2025-12-15-intelligent-investor" aria-pressed="false" aria-label="稍后读：读《聪明的投资者》：理性与投机" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="writing-movie-notes-v1" data-scope="writing" data-year="2025" data-topics="[&quot;电影&quot;]" data-search="电影 从视听语言、创作者与观影经验出发理解电影。 电影札记  电影"><div class="hm-entry-meta"><span>电影札记</span><time datetime="2025-12-02">更新于 2025-12-02</time></div><h3 class="hm-entry-title"><a href="movie/">电影</a></h3><p class="hm-entry-summary">从视听语言、创作者与观影经验出发理解电影。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>电影</span></div><button class="hm-save" type="button" data-save-id="writing-movie-notes-v1" aria-pressed="false" aria-label="稍后读：电影" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="essay-2025-09-13-youth-existential-crisis" data-scope="writing" data-year="2025" data-topics="[&quot;随笔&quot;, &quot;成长与自省&quot;]" data-search="随想录：普遍性青年存在主义危机 从毕业分岔、旅行与实验戏剧出发，追问死亡焦虑、孤独和意义。 随笔  随笔 成长与自省"><div class="hm-entry-meta"><span>随笔</span><time datetime="2025-09-13">2025-09-13</time></div><h3 class="hm-entry-title"><a href="writing/essays/youth-existential-crisis/">随想录：普遍性青年存在主义危机</a></h3><p class="hm-entry-summary">从毕业分岔、旅行与实验戏剧出发，追问死亡焦虑、孤独和意义。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>随笔</span><span>成长与自省</span></div><button class="hm-save" type="button" data-save-id="essay-2025-09-13-youth-existential-crisis" aria-pressed="false" aria-label="稍后读：随想录：普遍性青年存在主义危机" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="math-2025-03-04-controlling-derivatives" data-scope="math" data-year="2025" data-topics="[&quot;数学随想&quot;, &quot;数学分析&quot;]" data-search="导数之间的控制关系 由高阶导数的极限谈到泰勒展开、范德蒙行列式与 Poincaré 不等式。 数学随想  数学随想 数学分析"><div class="hm-entry-meta"><span>数学随想</span><time datetime="2025-03-04">2025-03-04</time></div><h3 class="hm-entry-title"><a href="math/reflections/controlling-derivatives/">导数之间的控制关系</a></h3><p class="hm-entry-summary">由高阶导数的极限谈到泰勒展开、范德蒙行列式与 Poincaré 不等式。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>数学随想</span><span>数学分析</span></div><button class="hm-save" type="button" data-save-id="math-2025-03-04-controlling-derivatives" aria-pressed="false" aria-label="稍后读：导数之间的控制关系" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="reading-2025-02-19-practice-and-learning" data-scope="writing" data-year="2025" data-topics="[&quot;阅读摘记&quot;, &quot;教育&quot;, &quot;数学学习&quot;]" data-search="《惰者集》：机械训练与数学感觉 从初等教育、器乐练习到数学训练，思考机械重复为何仍是掌握技术的必要基础。 阅读摘记  阅读摘记 教育 数学学习"><div class="hm-entry-meta"><span>阅读摘记</span><time datetime="2025-02-19">2025-02-19</time></div><h3 class="hm-entry-title"><a href="writing/reading/practice-and-learning/">《惰者集》：机械训练与数学感觉</a></h3><p class="hm-entry-summary">从初等教育、器乐练习到数学训练，思考机械重复为何仍是掌握技术的必要基础。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>阅读摘记</span><span>教育</span><span>数学学习</span></div><button class="hm-save" type="button" data-save-id="reading-2025-02-19-practice-and-learning" aria-pressed="false" aria-label="稍后读：《惰者集》：机械训练与数学感觉" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="essay-2025-02-14-reflections-on-love" data-scope="writing" data-year="2025" data-topics="[&quot;随笔&quot;, &quot;爱与关系&quot;, &quot;成长与自省&quot;]" data-search="爱的反思 重新审视爱的分量与表达方式，在天性、冲动与主动选择之间寻找自由。 随笔  随笔 爱与关系 成长与自省"><div class="hm-entry-meta"><span>随笔</span><time datetime="2025-02-14">2025-02-14</time></div><h3 class="hm-entry-title"><a href="writing/essays/reflections-on-love/">爱的反思</a></h3><p class="hm-entry-summary">重新审视爱的分量与表达方式，在天性、冲动与主动选择之间寻找自由。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>随笔</span><span>爱与关系</span><span>成长与自省</span></div><button class="hm-save" type="button" data-save-id="essay-2025-02-14-reflections-on-love" aria-pressed="false" aria-label="稍后读：爱的反思" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="reading-2025-02-14-lover-discourse" data-scope="writing" data-year="2025" data-topics="[&quot;阅读摘记&quot;, &quot;爱与关系&quot;]" data-search="《恋人絮语》：幽冥与肉麻 摘录罗兰·巴特与王小波关于恋爱、疯狂、幽冥和肉麻的文字，并记录阅读后的错愕。 阅读摘记  阅读摘记 爱与关系"><div class="hm-entry-meta"><span>阅读摘记</span><time datetime="2025-02-14">2025-02-14</time></div><h3 class="hm-entry-title"><a href="writing/reading/lover-discourse/">《恋人絮语》：幽冥与肉麻</a></h3><p class="hm-entry-summary">摘录罗兰·巴特与王小波关于恋爱、疯狂、幽冥和肉麻的文字，并记录阅读后的错愕。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>阅读摘记</span><span>爱与关系</span></div><button class="hm-save" type="button" data-save-id="reading-2025-02-14-lover-discourse" aria-pressed="false" aria-label="稍后读：《恋人絮语》：幽冥与肉麻" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="math-2025-02-08-distance-function-laplacian" data-scope="math" data-year="2025" data-topics="[&quot;数学随想&quot;, &quot;黎曼几何&quot;]" data-search="黎曼几何一则：距离函数的拉普拉斯 从距离函数的拉普拉斯比较出发，说明 Lipschitz 性为何是分布意义证明中的关键。 数学随想  数学随想 黎曼几何"><div class="hm-entry-meta"><span>数学随想</span><time datetime="2025-02-08">2025-02-08</time></div><h3 class="hm-entry-title"><a href="math/reflections/distance-function-laplacian/">黎曼几何一则：距离函数的拉普拉斯</a></h3><p class="hm-entry-summary">从距离函数的拉普拉斯比较出发，说明 Lipschitz 性为何是分布意义证明中的关键。</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>数学随想</span><span>黎曼几何</span></div><button class="hm-save" type="button" data-save-id="math-2025-02-08-distance-function-laplacian" aria-pressed="false" aria-label="稍后读：黎曼几何一则：距离函数的拉普拉斯" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="pdf-elliptic-pde-lax-milgram" data-scope="math" data-year="2025" data-topics="[&quot;偏微分方程&quot;, &quot;泛函分析&quot;]" data-search="Lax–Milgram 定理 二阶椭圆型偏微分方程讨论班讲稿。 讨论班讲稿 PDF 偏微分方程 泛函分析"><div class="hm-entry-meta"><span>讨论班讲稿</span><span>2025 年寒假</span></div><h3 class="hm-entry-title"><a href="elliptic-pde/note1.pdf">Lax–Milgram 定理</a></h3><p class="hm-entry-summary">二阶椭圆型偏微分方程讨论班讲稿。</p><p class="hm-entry-format">PDF · 5 页 · 约 3.82 MB</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>偏微分方程</span><span>泛函分析</span></div><button class="hm-save" type="button" data-save-id="pdf-elliptic-pde-lax-milgram" aria-pressed="false" aria-label="稍后读：Lax–Milgram 定理" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="pdf-elliptic-pde-variational-method" data-scope="math" data-year="2025" data-topics="[&quot;偏微分方程&quot;, &quot;泛函分析&quot;]" data-search="变分方法和一点泛函分析知识 二阶椭圆型偏微分方程讨论班讲稿。 讨论班讲稿 PDF 偏微分方程 泛函分析"><div class="hm-entry-meta"><span>讨论班讲稿</span><span>2025 年寒假</span></div><h3 class="hm-entry-title"><a href="elliptic-pde/note2.1.pdf">变分方法和一点泛函分析知识</a></h3><p class="hm-entry-summary">二阶椭圆型偏微分方程讨论班讲稿。</p><p class="hm-entry-format">PDF · 5 页 · 约 5.47 MB</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>偏微分方程</span><span>泛函分析</span></div><button class="hm-save" type="button" data-save-id="pdf-elliptic-pde-variational-method" aria-pressed="false" aria-label="稍后读：变分方法和一点泛函分析知识" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="pdf-elliptic-pde-continuity-method" data-scope="math" data-year="2025" data-topics="[&quot;偏微分方程&quot;]" data-search="连续性方法 二阶椭圆型偏微分方程讨论班讲稿。 讨论班讲稿 PDF 偏微分方程"><div class="hm-entry-meta"><span>讨论班讲稿</span><span>2025 年寒假</span></div><h3 class="hm-entry-title"><a href="elliptic-pde/note2.2.pdf">连续性方法</a></h3><p class="hm-entry-summary">二阶椭圆型偏微分方程讨论班讲稿。</p><p class="hm-entry-format">PDF · 3 页 · 约 1.18 MB</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>偏微分方程</span></div><button class="hm-save" type="button" data-save-id="pdf-elliptic-pde-continuity-method" aria-pressed="false" aria-label="稍后读：连续性方法" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="pdf-elliptic-pde-compactness-method" data-scope="math" data-year="2025" data-topics="[&quot;偏微分方程&quot;]" data-search="紧性方法 二阶椭圆型偏微分方程讨论班讲稿。 讨论班讲稿 PDF 偏微分方程"><div class="hm-entry-meta"><span>讨论班讲稿</span><span>2025 年寒假</span></div><h3 class="hm-entry-title"><a href="elliptic-pde/note3.pdf">紧性方法</a></h3><p class="hm-entry-summary">二阶椭圆型偏微分方程讨论班讲稿。</p><p class="hm-entry-format">PDF · 3 页 · 约 1.61 MB</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>偏微分方程</span></div><button class="hm-save" type="button" data-save-id="pdf-elliptic-pde-compactness-method" aria-pressed="false" aria-label="稍后读：紧性方法" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="pdf-elliptic-pde-de-giorgi-viscosity" data-scope="math" data-year="2025" data-topics="[&quot;偏微分方程&quot;]" data-search="De Giorgi 迭代与粘性解笔记 讨论班第四章与第五章部分内容的讲稿。 讨论班讲稿 PDF 偏微分方程"><div class="hm-entry-meta"><span>讨论班讲稿</span><span>2025 年春季</span></div><h3 class="hm-entry-title"><a href="elliptic-pde/note4.pdf">De Giorgi 迭代与粘性解笔记</a></h3><p class="hm-entry-summary">讨论班第四章与第五章部分内容的讲稿。</p><p class="hm-entry-format">PDF · 10 页 · 约 0.69 MB</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>偏微分方程</span></div><button class="hm-save" type="button" data-save-id="pdf-elliptic-pde-de-giorgi-viscosity" aria-pressed="false" aria-label="稍后读：De Giorgi 迭代与粘性解笔记" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="pdf-elliptic-pde-perron" data-scope="math" data-year="2024" data-topics="[&quot;偏微分方程&quot;]" data-search="二阶椭圆 PDE：前三章与 Perron 方法 韩青、林芳华《二阶椭圆型偏微分方程》讨论班讲稿；部分估计内容有所缺失。 讨论班讲稿 PDF 偏微分方程"><div class="hm-entry-meta"><span>讨论班讲稿</span><span>2024 年秋季</span></div><h3 class="hm-entry-title"><a href="elliptic-pde/fall-seminar.pdf">二阶椭圆 PDE：前三章与 Perron 方法</a></h3><p class="hm-entry-summary">韩青、林芳华《二阶椭圆型偏微分方程》讨论班讲稿；部分估计内容有所缺失。</p><p class="hm-entry-format">PDF · 11 页 · 约 0.92 MB</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>偏微分方程</span></div><button class="hm-save" type="button" data-save-id="pdf-elliptic-pde-perron" aria-pressed="false" aria-label="稍后读：二阶椭圆 PDE：前三章与 Perron 方法" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="pdf-harmonic-polynomials" data-scope="math" data-year="" data-topics="[&quot;偏微分方程&quot;, &quot;调和分析&quot;]" data-search="调和多项式及其应用 从复变函数中的一个结论出发，整理调和多项式的性质与应用。 课程论文 PDF 偏微分方程 调和分析"><div class="hm-entry-meta"><span>课程论文</span></div><h3 class="hm-entry-title"><a href="elliptic-pde/harmonic-poly.pdf">调和多项式及其应用</a></h3><p class="hm-entry-summary">从复变函数中的一个结论出发，整理调和多项式的性质与应用。</p><p class="hm-entry-format">PDF · 12 页 · 约 0.94 MB</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>偏微分方程</span><span>调和分析</span></div><button class="hm-save" type="button" data-save-id="pdf-harmonic-polynomials" aria-pressed="false" aria-label="稍后读：调和多项式及其应用" hidden>稍后读</button></div></article><article class="hm-entry" data-entry data-id="pdf-bochner-technique" data-scope="math" data-year="" data-topics="[&quot;黎曼几何&quot;]" data-search="Bochner 技巧及其应用 从 Riemann 测度与微分算子出发，讨论 Hodge 理论和 Cheeger–Gromoll 分裂定理。 课程论文 PDF 黎曼几何"><div class="hm-entry-meta"><span>课程论文</span></div><h3 class="hm-entry-title"><a href="Geometry/midterm.pdf">Bochner 技巧及其应用</a></h3><p class="hm-entry-summary">从 Riemann 测度与微分算子出发，讨论 Hodge 理论和 Cheeger–Gromoll 分裂定理。</p><p class="hm-entry-format">PDF · 27 页 · 约 0.55 MB · 英文</p><div class="hm-entry-footer"><div class="hm-entry-tags" aria-label="主题"><span>黎曼几何</span></div><button class="hm-save" type="button" data-save-id="pdf-bochner-technique" aria-pressed="false" aria-label="稍后读：Bochner 技巧及其应用" hidden>稍后读</button></div></article></div><div class="hm-library-empty" data-library-empty hidden><p>没有符合条件的内容。试试其他关键词或取消筛选。</p><button type="button" data-library-reset>清除筛选</button></div></section>
+
+<div class="hm-colophon">
+<p>这里的文字与笔记，署名「希尔伯特的眼泪」。<a href="about/">简短介绍</a> · <a href="guestbook/">留下想法</a></p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+        
+          
+          <a href="explore/" class="md-footer__link md-footer__link--next" aria-label="下一页: 内容目录">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                内容目录
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025–2026 希尔伯特的眼泪
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Hilbertear" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.zhihu.com/people/wen-zhong-16-88" target="_blank" rel="noopener" title="知乎" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M170.54 148.13v217.54l23.43.01 7.71 26.37 42.01-26.37h49.53V148.13zm97.75 193.93h-27.94l-27.9 17.51-5.08-17.47-11.9-.04V171.75h72.82zm-118.46-94.39H97.5c1.74-27.1 2.2-51.59 2.2-73.46h51.16s1.97-22.56-8.58-22.31h-88.5c3.49-13.12 7.87-26.66 13.12-40.67 0 0-24.07 0-32.27 21.57-3.39 8.9-13.21 43.14-30.7 78.12 5.89-.64 25.37-1.18 36.84-22.21 2.11-5.89 2.51-6.66 5.14-14.53h28.87c0 10.5-1.2 66.88-1.68 73.44H20.83c-11.74 0-15.56 23.62-15.56 23.62h65.58C66.45 321.1 42.83 363.12 0 396.34c20.49 5.85 40.91-.93 51-9.9 0 0 22.98-20.9 35.59-69.25l53.96 64.94s7.91-26.89-1.24-39.99c-7.58-8.92-28.06-33.06-36.79-41.81L87.9 311.95c4.36-13.98 6.99-27.55 7.87-40.67h61.65s-.09-23.62-7.59-23.62zm412.02-1.6c20.83-25.64 44.98-58.57 44.98-58.57s-18.65-14.8-27.38-4.06c-6 8.15-36.83 48.2-36.83 48.2zm-150.09-59.09c-9.01-8.25-25.91 2.13-25.91 2.13s39.52 55.04 41.12 57.45l19.46-13.73s-25.67-37.61-34.66-45.86h-.01zM640 258.35c-19.78 0-130.91.93-131.06.93v-101c4.81 0 12.42-.4 22.85-1.2 40.88-2.41 70.13-4 87.77-4.81 0 0 12.22-27.19-.59-33.44-3.07-1.18-23.17 4.58-23.17 4.58s-165.22 16.49-232.36 18.05c1.6 8.82 7.62 17.08 15.78 19.55 13.31 3.48 22.69 1.7 49.15.89 24.83-1.6 43.68-2.43 56.51-2.43v99.81H351.41s2.82 22.31 25.51 22.85h107.94v70.92c0 13.97-11.19 21.99-24.48 21.12-14.08.11-26.08-1.15-41.69-1.81 1.99 3.97 6.33 14.39 19.31 21.84 9.88 4.81 16.17 6.57 26.02 6.57 29.56 0 45.67-17.28 44.89-45.31v-73.32h122.36c9.68 0 8.7-23.78 8.7-23.78z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.footer", "toc.follow"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f13b1293.min.js"></script>
+      
+        <script src="javascripts/config.js"></script>
+      
+        <script src="javascripts/comments.js"></script>
+      
+        <script src="javascripts/reading.js"></script>
+      
+        <script src="javascripts/content-motion.js"></script>
+      
+        <script src="javascripts/math-playground.js"></script>
+      
+        <script src="javascripts/reading-delight.js"></script>
+      
+    
+  </body>
+</html>

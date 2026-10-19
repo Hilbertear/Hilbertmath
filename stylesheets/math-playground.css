@@ -1,0 +1,72 @@
+/* A small mathematical instrument, secondary to the writing. */
+.hm-editorial-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, .9fr);
+  gap: 2rem;
+  align-items: center;
+}
+.md-typeset .hm-math-playground {
+  margin: 0;
+  min-width: 0;
+  padding: .65rem 0 .15rem;
+  color: var(--hm-ink);
+  border-block: 1px solid var(--hm-line);
+}
+.md-typeset .hm-math-playground figcaption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .5rem;
+  margin: 0;
+  max-width: none;
+  font-family: var(--hm-serif);
+  font-size: .8rem;
+  font-style: normal;
+  color: var(--hm-ink-strong);
+}
+.hm-math-kicker { font-family: var(--hm-sans); font-size: .47rem; letter-spacing: .08em; color: var(--hm-muted); }
+.hm-math-kicker > span { padding-left: .35rem; color: var(--hm-gold); }
+.hm-math-curve { display: block; width: 100%; height: 138px; overflow: visible; }
+.hm-math-playground.is-ready .hm-math-curve { cursor: ew-resize; }
+.hm-math-grid path { fill: none; stroke: var(--hm-line); stroke-width: .5; }
+.hm-math-axes path { fill: none; stroke: var(--hm-line); stroke-width: 1; }
+.hm-math-axes text { fill: var(--hm-muted); font: italic 10px Georgia, serif; }
+.hm-math-trace, .hm-math-highlight { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.hm-math-trace { stroke: var(--hm-ink-strong); stroke-width: 1.2; opacity: .88; }
+.hm-math-highlight { stroke: var(--hm-gold); stroke-width: 1.9; stroke-dasharray: .18 .82; stroke-dashoffset: -.06; }
+.hm-math-point { fill: var(--hm-gold); stroke: var(--hm-paper); stroke-width: 1; }
+.hm-math-playground.is-revealing .hm-math-highlight,
+.hm-math-playground.is-revealing .hm-math-point { visibility: hidden; }
+.md-typeset .hm-math-formula { margin: 0 0 .2rem; font: italic .59rem/1.5 Georgia, serif; text-align: center; color: var(--hm-muted); }
+.hm-math-controls { display: grid; gap: 0; }
+.hm-math-ratios { display: flex; align-items: center; justify-content: center; gap: .3rem; }
+.hm-math-playground button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: .1rem .55rem;
+  border: 1px solid transparent;
+  border-radius: .2rem;
+  color: var(--hm-muted);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--hm-sans);
+  font-size: .63rem;
+  line-height: 1.3;
+}
+.hm-math-playground button:hover { color: var(--hm-ink-strong); background: var(--hm-line); }
+.hm-math-ratios button[aria-pressed="true"] { color: var(--hm-ink-strong); border-color: var(--hm-line); background: var(--hm-paper-raised); }
+.hm-math-playground button[data-hm-play][aria-pressed="true"] { color: var(--hm-gold); }
+.hm-math-playground button:disabled { opacity: .55; cursor: not-allowed; }
+.hm-math-phase { display: grid; grid-template-columns: 2.8rem minmax(0, 1fr) 2.4rem; align-items: center; min-height: 44px; gap: .25rem; font-size: .6rem; }
+.hm-math-phase input { display: block; width: 100%; min-width: 0; min-height: 44px; margin: 0; accent-color: var(--hm-gold); cursor: pointer; }
+.hm-math-phase output { color: var(--hm-gold); text-align: right; font-variant-numeric: tabular-nums; }
+.hm-math-transport { display: flex; align-items: center; gap: .05rem; }
+.hm-math-transport > span { margin-left: auto; color: var(--hm-muted); font-size: .54rem; line-height: 1.5; }
+.hm-math-static-note { font-size: .6rem; color: var(--hm-muted); }
+.hm-math-playground :is(button, input):focus-visible { outline: 2px solid var(--hm-gold); outline-offset: 2px; }
+@media (max-width: 44.9844em) {
+  .hm-editorial-hero { grid-template-columns: minmax(0, 1fr); gap: 1.3rem; }
+  .md-typeset .hm-math-playground { width: 100%; max-width: 24rem; margin-inline: auto; }
+  .hm-math-curve { height: 124px; }
+}
+@media (pointer: coarse) { .hm-math-playground.is-ready .hm-math-curve { cursor: default; } }
+@media print { .hm-math-controls { display: none !important; } }

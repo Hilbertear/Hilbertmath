@@ -1,7 +1,7 @@
 ---
 title: "简短介绍"
 description: "希尔伯特的眼泪的简短学习经历与学术交流记录。"
-updated: "2026-09-15"
+updated: "2026-11-16"
 hide:
   - toc
 comments: false
@@ -10,6 +10,10 @@ comments: false
 # 希尔伯特的眼泪
 
 关注椭圆型偏微分方程、几何分析与数学物理，也读书、看电影、写一些文字。
+
+## 预印本
+
+- [Branched Covers and Fiberwise Degeneration along Weak Kähler Geodesics](https://arxiv.org/abs/2611.07451) · arXiv:2611.07451 · 2026.11
 
 ## 教育经历
 

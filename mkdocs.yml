@@ -41,8 +41,10 @@ theme:
   language: zh
 
 nav:
+  - 简介:
+      - 简短介绍: about.md
+      - 留言板: guestbook.md
   - 首页: index.md
-  - 内容目录: explore.md
   - 数学:
       - 数学首页: math.md
       - 偏微分方程: pde.md
@@ -71,9 +73,6 @@ nav:
       - 资源首页: resources.md
       - 数学资源: mathresources.md
       - 物理资源: phyresources.md
-  - 简介:
-      - 简短介绍: about.md
-      - 留言板: guestbook.md
   - 标签: tags.md
 
 plugins:

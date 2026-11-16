@@ -14,7 +14,7 @@
         <button type="button" data-reading-width="wide" aria-pressed="false">宽屏</button>
       </div>
       <button class="hm-save" type="button" data-save-id="{{ page.meta.comment_id | e }}" aria-pressed="false" aria-label="稍后读：{{ page.title | e }}" hidden>稍后读</button>
-      <a href="{{ 'explore/' | url }}">内容目录</a>
+      <a href="{{ './' | url }}#content">浏览文章</a>
       <span class="hm-reading-status" data-reading-status role="status" aria-live="polite"></span>
     </div>
     <progress class="hm-reading-progress" data-reading-progress max="100" value="0" aria-label="阅读进度" hidden></progress>
